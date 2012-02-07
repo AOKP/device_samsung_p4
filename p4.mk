@@ -42,9 +42,19 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
   Mms
 
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := p4
-PRODUCT_DEVICE := p4
-PRODUCT_MODEL := p4
+PRODUCT_NAME := aokp_p4
 PRODUCT_BRAND := samsung
+PRODUCT_DEVICE := p4
+PRODUCT_MODEL := GT-P7500
 PRODUCT_MANUFACTURER := samsung
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=GT-P7500 BUILD_ID=HTJ85B BUILD_FINGERPRINT=samsung/GT-P7500/GT-P7500:3.2/HTJ85B/XWKK4:user/release-keys PRIVATE_BUILD_DESC="GT-P7500-user 3.2 HTJ85B XWKK4 release-keys"
+
+# Release name and versioning
+PRODUCT_RELEASE_NAME := p4
+
+# Inherit common build.prop overrides
+-include vendor/aokp/products/common_versions.mk
+
+# Copy maguro specific prebuilt files
+PRODUCT_COPY_FILES +=  \
+    vendor/aokp/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
