@@ -41,6 +41,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
   Mms
+  
+# Get the long list of APNs
+PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
 PRODUCT_NAME := aokp_p4
 PRODUCT_BRAND := samsung
