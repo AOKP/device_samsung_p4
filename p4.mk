@@ -54,3 +54,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=GT-P7500 BUILD_ID=HTJ85B BUILD_FING
 
 # Release name and versioning
 PRODUCT_RELEASE_NAME := p4
+
+# Inherit common build.prop overrides
+-include vendor/aokp/products/common_versions.mk
+
+# Copy maguro specific prebuilt files
+PRODUCT_COPY_FILES +=  \
+    vendor/aokp/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
